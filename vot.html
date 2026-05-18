@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION FOR TAMILNADU</title>
+    <style>
+        /* அடிப்படை அமைப்புகள் (Reset & Base) */
+        *{
+
+            font-family:
+            'Noto Sans Tamil',
+            'Latha',
+            sans-serif;
+
+        }
+
+        body {
+            background-color: #0f172a; /* Slate 900 */
+            color: #f1f5f9; /* Slate 100 */
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* 1. முகப்புப் பக்கம் (Home Section) & Parallax */
+        .home-section{
+
+position:relative;
+
+min-height:100vh;
+height:auto;
+
+display:block;
+
+text-align:center;
+
+padding:50px 20px 100px;
+
+/* remove blue overlay */
+background:transparent;
+
+overflow:visible;
+
+}
+        .glass-box{
+
+            width:90%;
+            max-width:900px;
+
+            margin:20px auto;
+
+            padding:25px;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            text-align:center; /* exact center */
+
+            background:rgba(255,255,255,.08);
+
+            backdrop-filter:blur(15px);
+
+            border-radius:20px;
+
+            line-height:1.8;
+
+            color:white;
+
+            border:1px solid rgba(255,255,255,.1);
+        }
+
+.poster-img{
+
+width:500px;
+max-width:90%;
+height:auto;
+
+border-radius:25px;
+
+margin-top:30px;
+
+box-shadow:
+0 0 40px rgba(255,0,255,.5);
+
+transition:.5s;
+}
+
+.poster-img:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 50px cyan;
+
+}
+
+
+
+        .logo-area {
+            z-index: 10;
+            margin-bottom: 20px;
+        }
+
+        .logo-img{
+
+            height:240px !important;
+            width:240px !important;
+
+            border-radius:50%;
+
+            object-fit:cover; /* full fill */
+
+            overflow:hidden;
+
+            border:none;
+
+            box-shadow:
+            0 0 20px #F48B29,
+            0 0 40px #AC0D0D;
+
+            transition:.5s;
+
+        }
+
+        .organizer-detail {
+            color: #34d399;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        /* Competition Name (Strictly English) */
+        .comp-title{
+
+font-size:3rem;
+
+font-weight:8000;
+
+letter-spacing:5px;
+
+color:#6d28d9; /* solid violet */
+
+text-transform:uppercase;
+
+font-family:
+'Noto Sans Tamil',
+sans-serif;
+
+/* sharp glow only */
+text-shadow:
+2px 2px 0px #4c1d95,
+0 0 8px rgba(109,40,217,.35);
+
+animation:none;
+
+background:none;
+
+-webkit-background-clip:unset;
+
+filter:none;
+
+}
+
+
+@keyframes gradientMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+        .home-content {
+            font-size: 1.2rem;
+            max-width: 600px;
+            color: #cbd5e1;
+            z-index: 10;
+            line-height: 1.6;
+        }
+
+        .scroll-down{
+
+position:absolute;
+
+bottom:30px;
+
+color:var(--cream);
+
+font-size:.9rem;
+
+font-weight:bold;
+
+letter-spacing:3px;
+
+text-shadow:
+0 0 10px var(--gold);
+
+animation:bounce 2s infinite;
+
+}
+
+
+        /* 2. பிரிவுகள் மற்றும் தலைப்புகள் (Categories & Titles) */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #34d399;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle{
+
+color:#6d28d9 !important;
+
+font-size:1rem;
+
+font-weight:600;
+
+text-align:center !important;
+
+display:block;
+
+width:100%;
+
+margin:0 auto 50px auto;
+
+text-shadow:
+0 0 6px rgba(109,40,217,.2);
+
+}
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: rgba(2, 6, 23, 0.5);
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(52, 211, 153, 0.5);
+            transform: translateY(-8px);
+        }
+
+        .card-num {
+            height: 45px;
+            width: 45px;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .topic-box {
+            border-top: 1px solid #1e293b;
+            padding-top: 15px;
+        }
+
+        .topic-list{
+
+list-style:none; /* remove default bullets */
+
+padding-left:0;
+
+margin-left:0;
+
+}
+.topic-label{
+
+color:#6d28d9 !important;
+
+font-weight:700;
+
+}
+
+.topic-list li{
+
+position:relative;
+
+padding-left:20px;
+
+margin-bottom:10px;
+
+}
+
+.topic-list li::before{
+
+content:"•";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+color:#6d28d9 !important;
+
+font-size:18px;
+
+font-weight:bold;
+
+}
+
+        /* 3. எப்படி பங்கேற்பது? (How to Participate) */
+        .participate-section {
+            background-color: rgba(2, 6, 23, 0.4);
+            border-top: 1px solid rgba(30, 41, 59, 0.6);
+            border-bottom: 1px solid rgba(30, 41, 59, 0.6);
+            padding: 80px 20px;
+        }
+
+        .steps-wrapper {
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        .step-item{
+
+display:flex;
+
+gap:20px;
+
+margin-bottom:25px;
+
+align-items:flex-start;
+
+color:#6d28d9; /* content violet */
+
+font-size:1.1rem;
+
+line-height:1.7;
+
+}
+
+        .step-num{
+
+flex-shrink:0;
+
+background:rgba(109,40,217,.15);
+
+color:#6d28d9;
+
+height:40px;
+width:40px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-weight:bold;
+
+border:2px solid rgba(109,40,217,.4);
+
+box-shadow:
+0 0 10px rgba(109,40,217,.2);
+
+}
+
+        /* Register Button */
+        .btn-container {
+            text-align: center;
+        }
+
+        .register-btn {
+            position: relative;
+            display: inline-block;
+            background-color: #020617;
+            color: #34d399;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .register-btn:hover {
+            color: #ffffff;
+            background-color: #10b981;
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+            transform: scale(1.05);
+        }
+
+        /* 4. தொடர்பு பக்கம் (Contact Section) */
+        .footer-section {
+            padding: 80px 20px 40px 20px;
+            text-align: center;
+        }
+
+        /* தொடர்பு கட்டங்களுக்கான பொதுவான ஸ்டைல் */
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start; /* ஐகான் எப்போதுமே மேல் வரியின் தொடக்கத்தில் இருக்கும் */
+    gap: 16px; /* ஐகானுக்கும் டெக்ஸ்ட்டுக்கும் நடுவில் உள்ள இடைவெளி */
+    background-color: #0b1329; /* உங்கள் கார்டின் பின்னணி நிறம் */
+    border: 1px solid #1e293b;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: left;
+    max-width: 500px; /* கார்டின் அகலத்தை கட்டுப்படுத்த */
+    width: 100%;
+}
+
+/* பள்ளி பெயரையும் முகவரியையும் நேராகக் கீழே கொண்டு வரும் மேஜிக் */
+.text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* பெயருக்கும் அட்ரஸுக்கும் நடுவில் உள்ள கேப் */
+}
+
+.school-name {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.address-text {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-top: 2px; /* ஐகானை முதல் வரியோடு சரியாக சீரமைக்க */
+}
+
+/* கணினி மற்றும் டிவிகளுக்கான ரெஸ்பான்சிவ் அமைப்பு */
+@media (min-width: 768px) {
+    .contact-grid {
+        flex-direction: row; /* பெரிய திரைகளில் பக்கவாட்டில் (Row) மாறும் */
+        align-items: stretch; /* எல்லா பாக்ஸ்களும் ஒரே உயரத்தில் இருக்கும் */
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact-item {
+        flex: 1; /* மூன்று பாக்ஸ்களும் சமமான இடத்தை எடுத்துக்கொள்ளும் */
+    }
+}
+
+        .icon {
+            color: #34d399;
+            font-size: 1.2rem;
+        }
+
+
+
+        /* அனிமேஷன் */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* RESPONSIVE DESIGN (PC, Mobile, Tab, TV) */
+        @media (min-width: 768px) {
+            .comp-title { font-size: 4.5rem; }
+            .section-title { font-size: 2.8rem; }
+            .contact-grid { flex-direction: row; gap: 40px; }
+        }
+
+        @media (min-width: 1200px) {
+            .comp-title { font-size: 6rem; }
+        }
+
+        @media (min-width: 1920px) {
+            /* Smart TV / 4K Displays */
+            .comp-title { font-size: 7.5rem; }
+            .container { max-width: 1600px; }
+            .home-content, .step-item { font-size: 1.5rem; }
+        }
+    
+.artist-wrap{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+.artist{
+width:120px;
+animation:floatKid 4s ease-in-out infinite alternate;
+}
+.left{transform:rotate(-8deg);}
+.right{transform:rotate(8deg);}
+@keyframes floatKid{
+from{transform:translateY(0)}
+to{transform:translateY(-15px)}
+}
+
+.floating-teach{
+
+position:absolute;
+
+left:1%;
+bottom:250px;
+height:600px;
+width:500px; /* bigger */
+
+animation:floatKid 4s infinite alternate;
+
+z-index:5;
+
+}
+.container,.participate-section,.footer-section{
+position:relative;
+overflow:hidden;
+}
+.container::before,.participate-section::before,.footer-section::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(-45deg,#0f172a,#2d1b69,#1e3a8a,#7e22ce);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
+opacity:.25;
+z-index:-1;
+}
+.participate-section{
+position:relative;
+overflow:hidden;
+}
+
+.participate-girl{
+
+position:absolute;
+
+left:1%;
+
+
+bottom:-6600px;
+width:350px;
+height: 500px;
+
+animation:floatKid 4s ease-in-out infinite alternate;
+
+z-index:5;
+
+}
+
+.participate-boy{
+
+position:absolute;
+
+right:4%;
+
+bottom:-6600px;
+height: 500px;
+width:350px;
+
+animation:floatKid 4s ease-in-out infinite alternate;
+
+z-index:5;
+
+}
+/* Mobile responsiveness for side characters */
+
+@media (max-width:768px){
+
+/* Home teacher image */
+
+.floating-teach{
+
+width:140px !important;
+height:auto;
+
+left:-20px;
+
+bottom:80px;
+
+opacity:.85;
+
+z-index:1;
+
+}
+
+/* Participate girl */
+
+.participate-girl{
+
+width:130px !important;
+height:auto;
+
+
+left:-20px;
+
+bottom:-7150px !important;
+
+opacity:.85;
+
+z-index:1;
+
+}
+
+/* Participate boy */
+
+.participate-boy{
+
+width:130px !important;
+height:auto;
+
+right:-20px;
+
+bottom:-13100px !important;
+
+opacity:.85;
+
+z-index:1;
+
+}
+
+/* Content above images */
+
+.glass-box,
+.steps-wrapper,
+.section-title,
+.btn-container{
+
+position:relative;
+z-index:10;
+
+}
+
+/* More space so images won't overlap */
+
+.participate-section{
+
+padding-bottom:180px;
+
+}
+
+.home-section{
+
+padding-bottom:150px;
+
+}
+
+}
+</style>
+
+<style>
+
+:root{
+
+--cream:#FBE6C2;
+--gold:#F0C929;
+--orange:#F48B29;
+--red:#AC0D0D;
+--dark:#5a0808;
+
+}
+
+/* whole website */
+
+body{
+
+background:
+linear-gradient(
+-45deg,
+var(--cream),
+var(--gold),
+var(--orange),
+var(--red)
+);
+
+background-size:400% 400%;
+
+animation:bgMove 12s ease infinite;
+
+color:var(--dark);
+
+}
+
+/* animated paint blobs */
+
+
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+
+
+/* square logo */
+
+.logo-img{
+
+height:250px !important;
+width:250px !important;
+
+object-fit:cover;
+
+border-radius:30px; /* square with smooth edge */
+
+padding:0;
+
+box-shadow:
+0 0 25px var(--orange),
+0 0 45px var(--red);
+
+transition:.5s;
+
+}
+
+.logo-img:hover{
+
+transform:
+translateY(-10px)
+scale(1.06);
+
+box-shadow:
+0 0 35px var(--gold),
+0 0 60px var(--orange);
+
+}
+
+/* glass cards */
+
+/* Home glass boxes paint connection */
+
+.logo-area .glass-box{
+
+position:relative;
+
+overflow:visible;
+
+}
+
+/* paint stroke between boxes */
+
+.logo-area .glass-box:not(:last-child)::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-35px;
+
+transform:translateX(-50%);
+
+width:180px;
+height:40px;
+
+background:
+linear-gradient(
+90deg,
+rgba(109,40,217,.2),
+#6d28d9,
+rgba(109,40,217,.2)
+);
+
+border-radius:50px;
+
+filter:blur(2px);
+
+opacity:.9;
+
+z-index:-1;
+
+}
+
+/* brush-like irregular shape */
+
+/* Glass box paint stroke connector */
+
+.logo-area .glass-box{
+
+position:relative;
+
+margin-bottom:70px;
+
+overflow:visible;
+
+}
+
+/* Light curved brush stroke */
+
+.logo-area .glass-box{
+
+position:relative;
+
+margin-bottom:50px;
+
+overflow:visible;
+
+}
+
+.logo-area .glass-box:not(:last-child)::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-35px;
+
+transform:
+translateX(-50%)
+rotate(8deg);
+
+width:25px;   /* thin */
+height:70px;
+
+background:
+linear-gradient(
+180deg,
+rgba(168,85,247,.1),
+#8b5cf6,
+#7c3aed,
+rgba(109,40,217,.1)
+);
+
+border-radius:
+60% 40%
+70% 30%
+50% 50% /
+40% 70%
+30% 60%
+70% 50%;
+
+opacity:.7;
+
+filter:blur(.8px);
+
+}
+
+/* small curve variation */
+
+.logo-area .glass-box:nth-child(even)::after{
+
+transform:
+translateX(-50%)
+rotate(-8deg);
+
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.logo-area .glass-box:not(:last-child)::after{
+
+width:18px;
+
+height:50px;
+
+}
+
+}
+/* titles */
+
+.comp-title{
+
+background:
+linear-gradient(
+to right,
+var(--red),
+var(--orange),
+var(--gold)
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+.section-title{
+
+color:var(--red);
+
+text-shadow:
+0 0 15px rgba(244,139,41,.4);
+
+}
+
+.card{
+
+background:
+rgba(251,230,194,.15);
+
+border:1px solid
+rgba(172,13,13,.2);
+
+}
+
+.card:hover{
+
+border-color:var(--orange);
+
+}
+
+.card-title{
+
+color:var(--red);
+
+}
+
+.card-num{
+
+background:var(--orange);
+
+color:white;
+
+}
+
+.topic-label{
+
+color:var(--red);
+
+}
+
+.topic-list li{
+
+color:#3b1c1c;
+
+}
+
+.topic-list li::before{
+
+color:var(--orange);
+
+}
+
+/* register button */
+
+.register-btn{
+
+background:var(--red);
+
+color:white;
+
+border:none;
+
+box-shadow:
+0 0 25px rgba(172,13,13,.3);
+
+}
+
+.register-btn:hover{
+
+background:var(--orange);
+
+transform:scale(1.05);
+
+}
+
+/* contact */
+
+.contact-item{
+
+background:
+rgba(251,230,194,.15);
+
+border:1px solid
+rgba(172,13,13,.2);
+
+}
+
+.school-name{
+
+color:var(--red);
+
+}
+
+.address-text{
+
+color:#4d2a2a;
+
+}
+.logo-area .glass-box.no-stroke::after{
+
+display:none;
+
+}
+</style>
+
+</head>
+<body>
+
+    <!-- 1. முகப்புப் பக்கம் (Home Section) -->
+    <section class="home-section">
+
+
+        <!-- LOGO / Organizer Detail -->
+        <div class="logo-area">
+            <img src="teach.png" class="floating-teach"><img src="LOGO.png" alt="Organizer Logo" class="logo-img" onerror="this.style.display='none';">
+            <div class="glass-box"><strong>தி மயன் ஸ்கூல் ஆஃப் ஃபைன் ஆர்ட்ஸ் பெருமையுடன் வழங்கும் ஆன்லைன் ஓவியப் போட்டி 2026</strong></div>
+
+            <div class="glass-box">
+                பள்ளி மற்றும் கல்லூரி மாணவர்களே! உங்கள் கைகளில் தூரிகைகளை ஏந்துங்கள்... 'VISION FOR TAMILNADU' என்ற கருப்பொருளின் மூலம் நாளைய உலகை உங்களது கலைவண்ணத்தால் எங்களுக்குக் காட்சிப்படுத்துங்கள்
+                </div>
+                
+                <div class="glass-box">
+                தி மயன் ஸ்கூல் ஆஃப் ஃபைன் ஆர்ட்ஸ் என்பது கலைக் கல்விக்கான ஒரு கிரியேட்டிவ் மையமாகும். இது வளர்ந்து வரும் மற்றும் புகழ்பெற்ற கலைஞர்களின் தனித்துவமான திறமைகளை ஊக்குவிப்பதுடன், நேசமிக்க ஒரு மனித உலகை உருவாக்க கலையை உலகெங்கும் கொண்டு சேர்க்க பாடுபடுகிறது
+                </div>
+                
+                <div class="glass-box no-stroke">
+                தி மயன் ஸ்கூல் ஆஃப் ஃபைன் ஆர்ட்ஸ் நிறுவனம் அக்டோபர் 2016-இல் திருச்சியில் திரு. முத்துக்குமார் ரவி அவர்களால் தொடங்கப்பட்டது. இது 'மயன் ஃபவுண்டேஷன் டிரஸ்ட்' கல்விச் சங்கத்தின் ஒரு பிரிவாகும்.
+                </div>
+
+        <!-- Competition Name -->
+        <h1 class="comp-title" id="compTitle">VISION FOR TAMILNADU</h1>
+        <img src="temp.jpeg"
+        alt="Poster"
+        class="poster-img">
+        <!-- Home Content in Tamil -->
+        <p class="glass-box no-stroke">
+            மாநில அளவிலான மாபெரும் ஓவியப் போட்டி 2026. உங்களின் தூரிகை வழியே தமிழ்நாட்டின் எதிர்காலக் கனவை உலகிற்கு வெளிப்படுத்துங்கள்!
+        </p>
+
+        <div class="scroll-down">SCROLL DOWN ↓</div>
+    </section>
+    <!-- விதிமுறைகள் & நிபந்தனைகள் -->
+
+<section class="container">
+
+    <h2 class="section-title">
+    விதிமுறைகள் & நிபந்தனைகள்
+    </h2>
+    
+    <p class="section-subtitle">
+    போட்டியில் பங்கேற்கும் அனைவரும் கீழ்க்கண்ட விதிமுறைகளை கவனமாகப் படிக்கவும்
+    </p>
+    
+    <div class="grid-layout">
+    
+    <!-- Rule 1 -->
+    
+    <div class="card">
+    
+    <div class="card-num">01</div>
+    
+    <h3 class="card-title">
+    தகுதி மற்றும் பதிவு
+    </h3>
+    
+    <div class="topic-box">
+    
+    <ul class="topic-list">
+    
+    <li>பள்ளி மாணவர்கள், கல்லூரி மாணவர்கள் மற்றும் பெரியவர்கள் (Group A முதல் F வரை) அனைவரும் பங்கேற்கலாம்.</li>
+    
+    <li>நுழைவுக்கட்டணம்: ₹150 மட்டும்.</li>
+    
+    <li>ஓவியங்களைச் சமர்ப்பிக்கும் முன் நுழைவுக்கட்டணம் செலுத்தப்பட்டிருக்க வேண்டும்.</li>
+    
+    </ul>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- Rule 2 -->
+    
+    <div class="card">
+    
+    <div class="card-num">02</div>
+    
+    <h3 class="card-title">
+    ஓவியம் வரைவதற்கான முறைகள்
+    </h3>
+    
+    <div class="topic-box">
+    
+    <ul class="topic-list">
+    
+    <li>பென்சில் ஸ்கெட்ச், கிரையான்ஸ், வாட்டர் கலர், ஆயில் பேஸ்டல், அக்ரிலிக் உள்ளிட்ட எந்த ஊடகத்தையும் பயன்படுத்தலாம்.</li>
+    
+    <li>குறைந்தபட்சம் A4 அளவில் இருக்க வேண்டும்.</li>
+    
+    <li>A3 அளவு கூடுதல் சிறப்பாக இருக்கும்.</li>
+    
+    <li>டிஜிட்டல் ஓவியங்கள் அல்லது AI மூலம் உருவாக்கப்பட்டவை அனுமதிக்கப்படாது.</li>
+    
+    <li>முழுவதும் கைகளால் வரையப்பட்டதாக இருக்க வேண்டும்.</li>
+    
+    </ul>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- Rule 3 -->
+    
+    <div class="card">
+    
+    <div class="card-num">03</div>
+    
+    <h3 class="card-title">
+    ஓவியங்களின் எண்ணிக்கை
+    </h3>
+    
+    <div class="topic-box">
+    
+    <ul class="topic-list">
+    
+    <li>ஒரு நபர் ஒரு பிரிவில் ஒரு ஓவியத்தை மட்டுமே சமர்ப்பிக்கலாம்.</li>
+    
+    <li>ஒன்றுக்கும் மேற்பட்ட ஓவியங்கள் சமர்ப்பிக்கப்பட்டால் அவை பரிசீலனைக்கு எடுத்துக்கொள்ளப்படாது.</li>
+    
+    </ul>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- Rule 4 -->
+    
+    <div class="card">
+    
+    <div class="card-num">04</div>
+    
+    <h3 class="card-title">
+    சமர்ப்பிக்கும் முறை
+    </h3>
+    
+    <div class="topic-box">
+    
+    <ul class="topic-list">
+    
+    <li>நிழல் விழாமல் தெளிவாகப் புகைப்படம் எடுக்க வேண்டும்.</li>
+    
+    <li>அல்லது ஸ்கேன் செய்து அனுப்பலாம்.</li>
+    
+    <li>கோப்பு பெயர்: Group_Name_City</li>
+    
+    <li>உதாரணம்: GroupC_Ravi_Trichy</li>
+    
+    <li>அசல் ஓவியத்தை பாதுகாப்பாக வைத்திருக்க வேண்டும்.</li>
+    
+    <li>கடைசி நாள்: மே 24, 2026</li>
+    
+    </ul>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- Rule 5 -->
+    
+    <div class="card">
+    
+    <div class="card-num">05</div>
+    
+    <h3 class="card-title">
+    நடுவர் குழுவின் மதிப்பீடு
+    </h3>
+    
+    <div class="topic-box">
+    
+    <ul class="topic-list">
+    
+    <li>தலைப்புப் பொருத்தம்</li>
+    
+    <li>படைப்பாற்றல்</li>
+    
+    <li>வண்ணங்கள் மற்றும் கோடுகளின் நேர்த்தி</li>
+    
+    </ul>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- Rule 6 -->
+    
+    <div class="card">
+    
+    <div class="card-num">06</div>
+    
+    <h3 class="card-title">
+    முடிவுகள் மற்றும் பரிசுகள்
+    </h3>
+    
+    <div class="topic-box">
+    
+    <ul class="topic-list">
+    
+    <li>முடிவுகள் மே 28, 2026 அன்று வெளியிடப்படும்.</li>
+    
+    <li>வெற்றியாளர்களுக்கு சான்றிதழ்கள் மற்றும் பரிசுகள் வழங்கப்படும்.</li>
+    
+    <li>நடுவர் குழுவின் முடிவே இறுதியானது.</li>
+    
+    </ul>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- Rule 7 -->
+    
+    <div class="card">
+    
+    <div class="card-num">07</div>
+    
+    <h3 class="card-title">
+    பொதுவான நிபந்தனைகள்
+    </h3>
+    
+    <div class="topic-box">
+    
+    <ul class="topic-list">
+    
+    <li>சமர்ப்பிக்கப்படும் ஓவியங்களை விழிப்புணர்வு மற்றும் விளம்பர நோக்கங்களுக்காக பயன்படுத்த உரிமை உண்டு.</li>
+    
+    <li>அரசியல் ரீதியாகத் தவறான அல்லது கண்ணியமற்ற கருத்துக்கள் கொண்ட ஓவியங்கள் நிராகரிக்கப்படும்.</li>
+    
+    </ul>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    <div class="scroll-down">
+        SCROLL DOWN ↓
+        </div>
+    
+    </section>
+    <br>
+    <br>
+
+    <!-- 2. பிரிவுகள் மற்றும் தலைப்புகள் (Categories & Titles - cot.txt) -->
+    <section class="container">
+        <div class="artist-wrap">
+
+<h2 class="section-title">பிரிவுகள் & தலைப்புகள்</h2>
+</div>
+        
+
+        <div class="grid-layout">
+            <!-- பிரிவு 1 -->
+            <div class="card">
+                <div class="card-num">01</div>
+                <h3 class="card-title">குரூப் I (Pre-KG to UKG): வண்ணம் தீட்டுதல் (Colouring)</h3>
+                <div class="topic-box">
+                    <p class="topic-label">தலைப்புகள்:</p>
+                    <ul class="topic-list">
+                        <li>கல்வி மற்றும் தமிழ் வளர்ச்சி (Education & Tamil Development)</li>
+                        <li>சமூக நீதி, சமூக நலன் மற்றும் மகளிர் உரிமை (Social Justice, Social Welfare & Women Empowerment)</li>
+                        <li>தகவல் தொழில்நுட்பவியல் (Information Technology & Digital Services)</li>
+                        <li>நெடுஞ்சாலைகள், தொழில் வளர்ச்சி மற்றும் வர்த்தகம் (Highways, Industries & Commerce)</li>
+                        <li>ஊரக மற்றும் நகர்ப்புற வளர்ச்சி (Rural & Urban Development)</li>
+                        <li>சுற்றுச்சூழல் மற்றும் வேளாண்மை (Environment & Agriculture)</li>
+                        <li>கலை, கலாச்சாரம், சுற்றுலா மற்றும் பண்பாடு (Art, Culture & Tourism)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- பிரிவு 2 -->
+            <div class="card">
+                <div class="card-num">02</div>
+                <h3 class="card-title">குரூப் II (1st & 2nd Std): புதிய அரசுக்கு வாழ்த்துகள் (Greetings for New Government)</h3>
+                <div class="topic-box">
+                    <p class="topic-label">தலைப்புகள்:</p>
+                    <ul class="topic-list">
+                        <li>கல்வி மற்றும் தமிழ் வளர்ச்சி (Education & Tamil Development)</li>
+                        <li>சமூக நீதி, சமூக நலன் மற்றும் மகளிர் உரிமை (Social Justice, Social Welfare & Women Empowerment)</li>
+                        <li>தகவல் தொழில்நுட்பவியல் (Information Technology & Digital Services)</li>
+                        <li>நெடுஞ்சாலைகள், தொழில் வளர்ச்சி மற்றும் வர்த்தகம் (Highways, Industries & Commerce)</li>
+                        <li>ஊரக மற்றும் நகர்ப்புற வளர்ச்சி (Rural & Urban Development)</li>
+                        <li>சுற்றுச்சூழல் மற்றும் வேளாண்மை (Environment & Agriculture)</li>
+                        <li>கலை, கலாச்சாரம், சுற்றுலா மற்றும் பண்பாடு (Art, Culture & Tourism)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- பிரிவு 3 -->
+            <div class="card">
+                <div class="card-num">03</div>
+                <h3 class="card-title">குரூப் III (3rd to 5th Std): புதிய அரசுக்கு வாழ்த்துகள் (Greetings for New Government)</h3>
+                <div class="topic-box">
+                    <p class="topic-label">தலைப்புகள்:</p>
+                    <ul class="topic-list">
+                        <li>கல்வி மற்றும் தமிழ் வளர்ச்சி (Education & Tamil Development)</li>
+                        <li>சமூக நீதி, சமூக நலன் மற்றும் மகளிர் உரிமை (Social Justice, Social Welfare & Women Empowerment)</li>
+                        <li>தகவல் தொழில்நுட்பவியல் (Information Technology & Digital Services)</li>
+                        <li>நெடுஞ்சாலைகள், தொழில் வளர்ச்சி மற்றும் வர்த்தகம் (Highways, Industries & Commerce)</li>
+                        <li>ஊரக மற்றும் நகர்ப்புற வளர்ச்சி (Rural & Urban Development)</li>
+                        <li>சுற்றுச்சூழல் மற்றும் வேளாண்மை (Environment & Agriculture)</li>
+                        <li>கலை, கலாச்சாரம், சுற்றுலா மற்றும் பண்பாடு (Art, Culture & Tourism)</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- பிரிவு 4 -->
+            <div class="card">
+                <div class="card-num">04</div>
+                <h3 class="card-title">குரூப் IV (6th to 8th Std): தமிழகத்தின் எதிர்காலம் (Future of TamilNadu)</h3>
+                <div class="topic-box">
+                    <p class="topic-label">தலைப்புகள்:</p>
+                    <ul class="topic-list">
+                        <li>கல்வி மற்றும் தமிழ் வளர்ச்சி (Education & Tamil Development)</li>
+                        <li>சமூக நீதி, சமூக நலன் மற்றும் மகளிர் உரிமை (Social Justice, Social Welfare & Women Empowerment)</li>
+                        <li>தகவல் தொழில்நுட்பவியல் (Information Technology & Digital Services)</li>
+                        <li>நெடுஞ்சாலைகள், தொழில் வளர்ச்சி மற்றும் வர்த்தகம் (Highways, Industries & Commerce)</li>
+                        <li>ஊரக மற்றும் நகர்ப்புற வளர்ச்சி (Rural & Urban Development)</li>
+                        <li>சுற்றுச்சூழல் மற்றும் வேளாண்மை (Environment & Agriculture)</li>
+                        <li>கலை, கலாச்சாரம், சுற்றுலா மற்றும் பண்பாடு (Art, Culture & Tourism)</li>
+                    </ul>
+                </div>
+            </div>
+             <!-- பிரிவு 5 -->
+             <div class="card">
+                <div class="card-num">05</div>
+                <h3 class="card-title">குரூப் V (9th & 10th Std): தமிழகத்தின் எதிர்காலம் (Future of TamilNadu)</h3>
+                <div class="topic-box">
+                    <p class="topic-label">தலைப்புகள்:</p>
+                    <ul class="topic-list">
+                        <li>கல்வி மற்றும் தமிழ் வளர்ச்சி (Education & Tamil Development)</li>
+                        <li>சமூக நீதி, சமூக நலன் மற்றும் மகளிர் உரிமை (Social Justice, Social Welfare & Women Empowerment)</li>
+                        <li>தகவல் தொழில்நுட்பவியல் (Information Technology & Digital Services)</li>
+                        <li>நெடுஞ்சாலைகள், தொழில் வளர்ச்சி மற்றும் வர்த்தகம் (Highways, Industries & Commerce)</li>
+                        <li>ஊரக மற்றும் நகர்ப்புற வளர்ச்சி (Rural & Urban Development)</li>
+                        <li>சுற்றுச்சூழல் மற்றும் வேளாண்மை (Environment & Agriculture)</li>
+                        <li>கலை, கலாச்சாரம், சுற்றுலா மற்றும் பண்பாடு (Art, Culture & Tourism)</li>
+                    </ul>
+                </div>
+            </div>
+             <!-- பிரிவு 6 -->
+             <div class="card">
+                <div class="card-num">06</div>
+                <h3 class="card-title">குரூப் VI (11th & 12th Std): தமிழகத்தின் எதிர்காலம் (Future of TamilNadu)</h3>
+                <div class="topic-box">
+                    <p class="topic-label">தலைப்புகள்:</p>
+                    <ul class="topic-list">
+                        <li>கல்வி மற்றும் தமிழ் வளர்ச்சி (Education & Tamil Development)</li>
+                        <li>சமூக நீதி, சமூக நலன் மற்றும் மகளிர் உரிமை (Social Justice, Social Welfare & Women Empowerment)</li>
+                        <li>தகவல் தொழில்நுட்பவியல் (Information Technology & Digital Services)</li>
+                        <li>நெடுஞ்சாலைகள், தொழில் வளர்ச்சி மற்றும் வர்த்தகம் (Highways, Industries & Commerce)</li>
+                        <li>ஊரக மற்றும் நகர்ப்புற வளர்ச்சி (Rural & Urban Development)</li>
+                        <li>சுற்றுச்சூழல் மற்றும் வேளாண்மை (Environment & Agriculture)</li>
+                        <li>கலை, கலாச்சாரம், சுற்றுலா மற்றும் பண்பாடு (Art, Culture & Tourism)</li>
+                    </ul>
+                </div>
+            </div>
+             <!-- பிரிவு 7 -->
+             <div class="card">
+                <div class="card-num">07</div>
+                <h3 class="card-title">குரூப் VII (கல்லூரி மாணவர்கள்): தமிழகத்தின் எதிர்காலம் (Future of TamilNadu)</h3>
+                <div class="topic-box">
+                    <p class="topic-label">தலைப்புகள்:</p>
+                    <ul class="topic-list">
+                        <li>கல்வி மற்றும் தமிழ் வளர்ச்சி (Education & Tamil Development)</li>
+                        <li>சமூக நீதி, சமூக நலன் மற்றும் மகளிர் உரிமை (Social Justice, Social Welfare & Women Empowerment)</li>
+                        <li>தகவல் தொழில்நுட்பவியல் (Information Technology & Digital Services)</li>
+                        <li>நெடுஞ்சாலைகள், தொழில் வளர்ச்சி மற்றும் வர்த்தகம் (Highways, Industries & Commerce)</li>
+                        <li>ஊரக மற்றும் நகர்ப்புற வளர்ச்சி (Rural & Urban Development)</li>
+                        <li>சுற்றுச்சூழல் மற்றும் வேளாண்மை (Environment & Agriculture)</li>
+                        <li>கலை, கலாச்சாரம், சுற்றுலா மற்றும் பண்பாடு (Art, Culture & Tourism)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            SCROLL DOWN ↓
+            </div>
+
+    </section>
+
+    <!-- 3. எப்படி பங்கேற்பது? (How to Participate - hot.txt) -->
+     
+    <img src="girl.png"
+class="participate-girl">
+
+<img src="boy.png"
+class="participate-boy">
+
+<h2 class="section-title"
+style="margin-bottom:40px;">
+
+எப்படி பங்கேற்பது?
+
+</h2>
+            
+            <div class="steps-wrapper">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div>பதிவு மற்றும் கட்டணம் : நுழைவுக் கட்டணமான ₹150 செலுத்தி, அதன் ஸ்கிரீன்ஷாட்டை (Screenshot) எங்களுக்கு வாட்ஸ்அப்பில் அனுப்பவும்.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div>கலரிங் ஷீட் பெறுதல்: உங்கள் கட்டண விவரம் சரிபார்க்கப்பட்டவுடன், குழந்தைகளுக்கான பிரத்யேக கலரிங் ஷீட் (PDF வடிவத்தில்) உங்களுக்கு அனுப்பி வைக்கப்படும்.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div>வண்ணம் தீட்டுதல்: அந்த PDF பக்கத்தை A4 அளவில் பிரிண்ட் அவுட் (Printout) எடுத்து,  குழந்தையை அழகாக வண்ணம் தீட்டச் செய்யவும்.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <div>சமர்ப்பித்தல்: குழந்தை வண்ணம் தீட்டி முடித்தவுடன், அந்தத் தாளைத் தெளிவாகப் புகைப்படம் எடுத்து அல்லது ஸ்கேன் செய்து எங்களுக்கு ஆன்லைனில் அப்லோடு/அனுப்பி வைக்க வேண்டும்.</div>
+                </div>
+                
+            </div>
+
+            <!-- Register Here Button -->
+            <div class="btn-container">
+                <a href="https://forms.gle/FpXhNeyyMiL7khc76" target="_blank" rel="noopener noreferrer" class="register-btn">
+                    இங்கே பதிவு செய்யவும்
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- 4. தொடர்பு பக்கம் (Contact Page - con.txt) -->
+    <footer class="footer-section">
+        <h2 class="section-title">தொடர்பு கொள்ள</h2>
+        
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <span>+91 7868989796</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">✉️</span>
+                <span>mayanschooloffinerts@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="icon">📍</span>
+                <div class="text-block">
+                    <strong class="school-name">Mayan School of Fine Arts</strong>
+                    <p class="address-text">
+                        No 2, 1st Floor, Vasantham complex,<br>
+                        Jaya Nagar 1St Cross, LIC Colony,<br>
+                        K.K Nagar, Tiruchirappalli – 620021.
+                    </p>
+                </div>
+        </div>
+        
+
+       
+    </footer>
+
+    <!-- Low Parallax Motion Script -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            const parallaxBg = document.getElementById('parallaxBg');
+            const compTitle = document.getElementById('compTitle');
+
+            // பின்னணி ஒளிவட்டங்களை மெதுவாக நகர்த்தும் அசைவு
+            parallaxBg.style.transform = `translateY(${scrollY * 0.35}px)`;
+
+            // தலைப்பை லேசாக Zoom-in செய்யும் அசைவு
+            if (scrollY < window.innerHeight) {
+                compTitle.style.transform = `scale(${1 + scrollY * 0.0003})`;
+            }
+        });
+    </script>
+</body>
+</html>
